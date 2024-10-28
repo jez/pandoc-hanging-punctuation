@@ -3,6 +3,12 @@
 -- TODO(jez) The typeset docs are wrong: cannot include `inline-block`.
 --
 -- TODO(jez) Document how to pick em values for the push/pull classes
+
+-- TODO(jez) This doesn't work: you probably need two traversals:
+-- One to replace all the Quoted (bottom up) then another to remove the extra
+-- Spans (top down)
+traverse = 'topdown'
+
 function Quoted(elem)
   local quoteKind
   local leftQuote
@@ -58,7 +64,9 @@ function Inlines(elems)
   --
   -- Find these cases and delete the push span, leaving only the pull span.
 
-  removeIfPushSpan(elems, 1)
+  if startOfLine and removeIfPushSpan(elems, 1) then
+    startOfLine = false
+  end
 
   local idx = 1
   while idx <= #elems do
@@ -71,4 +79,16 @@ function Inlines(elems)
   end
 
   return elems
+end
+
+-- TODO(jez) This callback will fire for all blocks, and you can use `.tag` to
+-- further choose whether to apply the filter.
+function Block(elem)
+  -- TODO(jez) Need to handle LineBlock, DefinitionList, Header, and Table specially
+  if elem.tag == Plain or elem.tag == Para then
+    startOfLine = true
+  else
+    startOfLine = false
+  end
+  return elem
 end

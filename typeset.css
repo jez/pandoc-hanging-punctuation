@@ -1,0 +1,18 @@
+:root {
+  --single-quote-width: 0.33em;
+  --double-quote-width: 0.44em;
+}
+
+.pull-single {
+  margin-left: calc(-1 * var(--single-quote-width));
+}
+.push-single {
+  margin-right: var(--single-quote-width)
+}
+.pull-double {
+  margin-left: calc(-1 * var(--double-quote-width));
+}
+.push-double {
+  margin-right: var(--double-quote-width)
+}
+
