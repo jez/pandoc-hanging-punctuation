@@ -16,5 +16,3 @@ Line this up\
 Here is not bold.
 
 **"Here is some bold"** and _'this is italic'_.
-
-## "Headings," technically
