@@ -270,39 +270,59 @@ end
 -- }}}
 
 -- TODO(jez) Document that this overrules the --html-q-tags=true setting
+-- TODO(jez) Document that this requires the `smart` extension (enabled by default for `markdown` filetype)
 --
 -- TODO(jez) The typeset docs are wrong: cannot include `inline-block`.
 --
 -- TODO(jez) Document how to pick em values for the push/pull classes
 --
 -- TODO(jez) You can probably write exp tests with `-t json` output after applying the filter
+-- TODO(jez) Delete the logging helpers before release
 
 -- TODO(jez) This doesn't work: you probably need two traversals:
 -- One to replace all the Quoted (bottom up) then another to remove the extra
 -- Spans (top down)
 
+local function makePushPull(quote)
+  local quoteKind
+  if quote == '‘' then
+    quoteKind = 'single'
+  else
+    quoteKind = 'double'
+  end
+
+  return {
+    pandoc.Span({}, {class = 'push-' .. quoteKind}),
+    pandoc.Span(pandoc.Str(quote), {class = 'pull-' .. quoteKind})
+  }
+end
+
 local replaceQuotes = {
-  Quoted = function (elem)
-    local quoteKind
-    local leftQuote
-    local rightQuote
-    if elem.quotetype == "SingleQuote" then
-      quoteKind = 'single'
-      leftQuote = '‘'
-      rightQuote = '’'
+  Str = function (elem)
+    local quote, rest = (elem.text):match('^([‘“])(.*)')
+    if quote then
+      local res = makePushPull(quote)
+      res[#res + 1] = pandoc.Str(rest)
+      return res
     else
-      quoteKind = 'double'
-      leftQuote = '“'
-      rightQuote = '”'
+      return elem
+    end
+  end,
+
+  Quoted = function (elem)
+    local leftQuote, rightQuote
+    if elem.quotetype == "SingleQuote" then
+      leftQuote, rightQuote = '‘', '’'
+    else
+      leftQuote, rightQuote = '“', '”'
     end
 
-    local res = {
-      pandoc.Span({}, {class = 'push-' .. quoteKind}),
-      pandoc.Span(pandoc.Str(leftQuote), {class = 'pull-' .. quoteKind}),
-      table.unpack(elem.content),
-    }
-    table.insert(res, pandoc.Span({}, {class = 'push-' .. quoteKind}))
-    table.insert(res, pandoc.Span(pandoc.Str(rightQuote), {class = 'pull-' .. quoteKind}))
+    local res = makePushPull(leftQuote)
+    for i = 1, #elem.content do
+      res[#res + 1] = elem.content[i]
+    end
+    res[#res + 1] = pandoc.Str(rightQuote)
+
     return res
   end,
 }
@@ -329,12 +349,10 @@ local removeLeadingPushSpans = {
   traverse = 'topdown',
 
   Block = function(elem)
-    -- TODO(jez) Need to handle LineBlock, DefinitionList, and Table specially
-    if elem.tag == 'Plain' or elem.tag == 'Para' or elem.tag == 'Header' then
-      startOfLine = true
-    else
-      startOfLine = false
-    end
+    -- TODO(jez) Support LineBlock and DefinitionList properly.
+    -- These should have `startOfLine=true`, for *every* list of inlines in
+    -- them, not just the very first.
+    startOfLine = true
     return elem
   end,
 
@@ -344,8 +362,18 @@ local removeLeadingPushSpans = {
   --
   -- Find these cases and delete the push span, leaving only the pull span.
   Inlines = function(elems)
-    if startOfLine and removeIfPushSpan(elems, 1) then
-      startOfLine = false
+    if startOfLine then
+      if removeIfPushSpan(elems, 1) then
+        startOfLine = false
+      elseif elems[1] and (
+          elems[1].tag == 'Str' or
+          elems[1].tag == 'Code' or
+          elems[1].tag == 'Space' or
+          elems[1].tag == 'Math' or
+          elems[1].tag == 'RawInline' or
+          elems[1].tag == 'Image') then
+        startOfLine = false
+      end
     end
 
     local idx = 1
@@ -359,6 +387,12 @@ local removeLeadingPushSpans = {
     end
 
     return elems
+  end,
+
+  -- Image caption is a list of inlines that behaves like it were a paragraph.
+  Image = function(elem)
+    startOfLine = true
+    return elem
   end,
 }
 

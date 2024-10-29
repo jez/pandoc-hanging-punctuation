@@ -953,6 +953,138 @@
       ]
     },
     {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Emph",
+          "c": [
+            {
+              "t": "Strong",
+              "c": [
+                {
+                  "t": "Quoted",
+                  "c": [
+                    {
+                      "t": "DoubleQuote"
+                    },
+                    [
+                      {
+                        "t": "Str",
+                        "c": "Here"
+                      },
+                      {
+                        "t": "Space"
+                      },
+                      {
+                        "t": "Str",
+                        "c": "is"
+                      },
+                      {
+                        "t": "Space"
+                      },
+                      {
+                        "t": "Str",
+                        "c": "some"
+                      },
+                      {
+                        "t": "Space"
+                      },
+                      {
+                        "t": "Str",
+                        "c": "bold"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "and"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "italic"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Quoted",
+          "c": [
+            {
+              "t": "DoubleQuote"
+            },
+            [
+              {
+                "t": "Str",
+                "c": "Some"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "text"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "explicitly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Quoted",
+          "c": [
+            {
+              "t": "SingleQuote"
+            },
+            [
+              {
+                "t": "Str",
+                "c": "curly"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "quotes."
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
       "t": "Header",
       "c": [
         2,
@@ -982,6 +1114,51 @@
           {
             "t": "Str",
             "c": "technically"
+          }
+        ]
+      ]
+    },
+    {
+      "t": "LineBlock",
+      "c": [
+        [
+          {
+            "t": "Str",
+            "c": "Are"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "line"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "blocks"
+          }
+        ],
+        [
+          {
+            "t": "Str",
+            "c": "enabled"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "by"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "default?"
           }
         ]
       ]

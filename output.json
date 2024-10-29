@@ -4,14 +4,1062 @@
     23,
     1
   ],
-  "meta": {},
+  "meta": {
+    "title": {
+      "t": "MetaInlines",
+      "c": [
+        {
+          "t": "Str",
+          "c": "input"
+        }
+      ]
+    }
+  },
   "blocks": [
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Yjarni"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Sigurðardóttir"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "spoke"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "EFF"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "from"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Iceland"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "yesterday:"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-double"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-double"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "“"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "Light"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "my"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "life,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "fire"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "my"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "florins"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-double"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-double"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "�"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "��"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "my"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "sin,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "my"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "soul."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "The"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "tip"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "tongue"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "taking"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "trip"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "to"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "118°"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "19’"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "43.5"
+        },
+        {
+          "t": "Str",
+          "c": "”"
+        },
+        {
+          "t": "Str",
+          "c": ".”"
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-double"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-double"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "“"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "She’s"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "faster"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "than"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "120’"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "4"
+        },
+        {
+          "t": "Str",
+          "c": "”"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "whale.”"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Piña"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "co­ladas"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "were"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "widely"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "consumed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "SoftBreak"
+        },
+        {
+          "t": "Str",
+          "c": "Götterdämmerung"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "from"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "1880–1912."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "For"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "low"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "price"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "$20"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "/"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "year"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "from"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Ex­hi­bits"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "A–E…"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "Then"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "duplex"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "came"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "forward."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-double"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-double"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "“"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "Thrice"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "tower,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "he"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "mounted"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "the"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "round"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "gunrest,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-single"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-single"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "‘"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "awaking"
+        },
+        {
+          "t": "Str",
+          "c": "’"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "HTML."
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "He"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "can"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "print"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "fixed"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "num­ber"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "of"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "dots"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "a"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "square"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "inch"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "(for"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "in­stance,"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "600"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "×"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "600)."
+        },
+        {
+          "t": "Str",
+          "c": "”"
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Line"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "this"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "up"
+        },
+        {
+          "t": "LineBreak"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-double"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-double"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "“"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "Line"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "this"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "up"
+        },
+        {
+          "t": "Str",
+          "c": "”"
+        },
+        {
+          "t": "LineBreak"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-single"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-single"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "‘"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "Line"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "this"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "up"
+        },
+        {
+          "t": "Str",
+          "c": "’"
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "class"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "Some"
+              },
+              {
+                "t": "Space"
+              },
+              {
+                "t": "Str",
+                "c": "text"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Here"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "is"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "not"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "bold."
+        }
+      ]
+    },
     {
       "t": "Para",
       "c": [
         {
           "t": "Strong",
           "c": [
+            {
+              "t": "Span",
+              "c": [
+                [
+                  "",
+                  [
+                    "push-double"
+                  ],
+                  []
+                ],
+                []
+              ]
+            },
             {
               "t": "Span",
               "c": [
@@ -56,35 +1104,8 @@
               "c": "bold"
             },
             {
-              "t": "Span",
-              "c": [
-                [
-                  "",
-                  [
-                    "push-double"
-                  ],
-                  []
-                ],
-                []
-              ]
-            },
-            {
-              "t": "Span",
-              "c": [
-                [
-                  "",
-                  [
-                    "pull-double"
-                  ],
-                  []
-                ],
-                [
-                  {
-                    "t": "Str",
-                    "c": "”"
-                  }
-                ]
-              ]
+              "t": "Str",
+              "c": "”"
             }
           ]
         },
@@ -151,6 +1172,309 @@
               "c": "italic"
             },
             {
+              "t": "Str",
+              "c": "’"
+            }
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "."
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Emph",
+          "c": [
+            {
+              "t": "Strong",
+              "c": [
+                {
+                  "t": "Span",
+                  "c": [
+                    [
+                      "",
+                      [
+                        "push-double"
+                      ],
+                      []
+                    ],
+                    []
+                  ]
+                },
+                {
+                  "t": "Span",
+                  "c": [
+                    [
+                      "",
+                      [
+                        "pull-double"
+                      ],
+                      []
+                    ],
+                    [
+                      {
+                        "t": "Str",
+                        "c": "“"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "t": "Str",
+                  "c": "Here"
+                },
+                {
+                  "t": "Space"
+                },
+                {
+                  "t": "Str",
+                  "c": "is"
+                },
+                {
+                  "t": "Space"
+                },
+                {
+                  "t": "Str",
+                  "c": "some"
+                },
+                {
+                  "t": "Space"
+                },
+                {
+                  "t": "Str",
+                  "c": "bold"
+                },
+                {
+                  "t": "Str",
+                  "c": "”"
+                }
+              ]
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "and"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "italic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-double"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-double"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "“"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "Some"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "text"
+        },
+        {
+          "t": "Str",
+          "c": "”"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "explicitly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-single"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-single"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "‘"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "curly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "quotes."
+        },
+        {
+          "t": "Str",
+          "c": "’"
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Before"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Strong",
+          "c": [
+            {
+              "t": "Span",
+              "c": [
+                [
+                  "",
+                  [
+                    "push-double"
+                  ],
+                  []
+                ],
+                []
+              ]
+            },
+            {
+              "t": "Span",
+              "c": [
+                [
+                  "",
+                  [
+                    "pull-double"
+                  ],
+                  []
+                ],
+                [
+                  {
+                    "t": "Str",
+                    "c": "“"
+                  }
+                ]
+              ]
+            },
+            {
+              "t": "Str",
+              "c": "Here"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "is"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "some"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "bold"
+            },
+            {
+              "t": "Str",
+              "c": "”"
+            }
+          ]
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "and"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Emph",
+          "c": [
+            {
               "t": "Span",
               "c": [
                 [
@@ -176,10 +1500,32 @@
                 [
                   {
                     "t": "Str",
-                    "c": "’"
+                    "c": "‘"
                   }
                 ]
               ]
+            },
+            {
+              "t": "Str",
+              "c": "this"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "is"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "italic"
+            },
+            {
+              "t": "Str",
+              "c": "’"
             }
           ]
         },
@@ -187,6 +1533,327 @@
           "t": "Str",
           "c": "."
         }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Before"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Emph",
+          "c": [
+            {
+              "t": "Strong",
+              "c": [
+                {
+                  "t": "Span",
+                  "c": [
+                    [
+                      "",
+                      [
+                        "push-double"
+                      ],
+                      []
+                    ],
+                    []
+                  ]
+                },
+                {
+                  "t": "Span",
+                  "c": [
+                    [
+                      "",
+                      [
+                        "pull-double"
+                      ],
+                      []
+                    ],
+                    [
+                      {
+                        "t": "Str",
+                        "c": "“"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "t": "Str",
+                  "c": "Here"
+                },
+                {
+                  "t": "Space"
+                },
+                {
+                  "t": "Str",
+                  "c": "is"
+                },
+                {
+                  "t": "Space"
+                },
+                {
+                  "t": "Str",
+                  "c": "some"
+                },
+                {
+                  "t": "Space"
+                },
+                {
+                  "t": "Str",
+                  "c": "bold"
+                },
+                {
+                  "t": "Str",
+                  "c": "”"
+                }
+              ]
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "and"
+            },
+            {
+              "t": "Space"
+            },
+            {
+              "t": "Str",
+              "c": "italic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "t": "Para",
+      "c": [
+        {
+          "t": "Str",
+          "c": "Before"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-double"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-double"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "“"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "Some"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "text"
+        },
+        {
+          "t": "Str",
+          "c": "”"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "with"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "explicitly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "push-single"
+              ],
+              []
+            ],
+            []
+          ]
+        },
+        {
+          "t": "Span",
+          "c": [
+            [
+              "",
+              [
+                "pull-single"
+              ],
+              []
+            ],
+            [
+              {
+                "t": "Str",
+                "c": "‘"
+              }
+            ]
+          ]
+        },
+        {
+          "t": "Str",
+          "c": "curly"
+        },
+        {
+          "t": "Space"
+        },
+        {
+          "t": "Str",
+          "c": "quotes."
+        },
+        {
+          "t": "Str",
+          "c": "’"
+        }
+      ]
+    },
+    {
+      "t": "Header",
+      "c": [
+        2,
+        [
+          "headings-technically",
+          [],
+          []
+        ],
+        [
+          {
+            "t": "Span",
+            "c": [
+              [
+                "",
+                [
+                  "push-double"
+                ],
+                []
+              ],
+              []
+            ]
+          },
+          {
+            "t": "Span",
+            "c": [
+              [
+                "",
+                [
+                  "pull-double"
+                ],
+                []
+              ],
+              [
+                {
+                  "t": "Str",
+                  "c": "“"
+                }
+              ]
+            ]
+          },
+          {
+            "t": "Str",
+            "c": "Headings,"
+          },
+          {
+            "t": "Str",
+            "c": "”"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "technically"
+          }
+        ]
+      ]
+    },
+    {
+      "t": "LineBlock",
+      "c": [
+        [
+          {
+            "t": "Str",
+            "c": "Are"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "line"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "blocks"
+          }
+        ],
+        [
+          {
+            "t": "Str",
+            "c": "enabled"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "by"
+          },
+          {
+            "t": "Space"
+          },
+          {
+            "t": "Str",
+            "c": "default?"
+          }
+        ]
       ]
     }
   ]

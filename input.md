@@ -17,4 +17,25 @@ Here is not bold.
 
 **"Here is some bold"** and _'this is italic'_.
 
+_**"Here is some bold"** and italic._
+
+“Some text” with explicitly ‘curly quotes.’
+
+Before **"Here is some bold"** and _'this is italic'_.
+
+Before _**"Here is some bold"** and italic._
+
+Before “Some text” with explicitly ‘curly quotes.’
+
+!["Some caption"](img.png)
+
+![Some "caption"](img.png)
+
+![](img.png) "text after image"
+
+Some "text" !["Some caption"](img.png)
+
 ## "Headings," technically
+
+| Are line blocks
+| enabled by default?
