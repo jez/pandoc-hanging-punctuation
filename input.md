@@ -9,7 +9,8 @@ Götterdämmerung from 1880–1912. For the low price of \$20 / year from Ex­hi
 
 Line this up\
 "Line this up"\
-'Line this up'
+'Line this up'\
+**'Even' the bold "quotes", too**
 
 [Some text]{.class}
 
@@ -37,5 +38,50 @@ Some "text" !["Some caption"](img.png)
 
 ## "Headings," technically
 
-| Are line blocks
-| enabled by default?
+| "Are" line blocks
+| enabled "by" default?
+| "Last" line
+
+
+"Term" 1
+
+:   "Definition" 1
+
+**"Term" 2 with inline markup**
+
+:   'Definition' 2
+
+Not a list
+
+- "Don't do lists"
+
+  Here is after, for reference
+
+- Here's another\
+  "Here's a quote after"
+
+Between
+
+1.  "Don't do lists"
+
+    Here is after, for reference
+
+1.  **"Bold and quoted"** should not be hung
+
+1.  Here's another\
+    "Here's a quote after"
+
+Between
+
+> "Here's a block quote"
+>
+> "Look, another block quote"
+
+Edge case
+
+- This should be allowed
+
+  > "Hanging quote" in this block quote inside a list\
+  > Line breaks onto two lines.
+
+- Another bullet

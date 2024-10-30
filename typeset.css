@@ -16,3 +16,27 @@
   margin-right: var(--double-quote-width)
 }
 
+/**
+ * Turn off hanging punctuation in list items and table cells, because there is
+ * usually not enough margin between the list bullet or list number and the
+ * start of the text for the punctuation to have somewhere to hang.
+ *
+ * This is not great because this applies recursively, including somewhere like a
+ * nested block quote, which might reintroduce enough margin to make room.
+ *
+ * I don't know of a way to target this specifically "directly under one of
+ * these things, ignoring things like inline formatting elements" in CSS, and
+ * I'm too lazy to attempt to handle it in the lua filter.
+ */
+li .pull-single,
+li .pull-double,
+td .pull-single,
+td .pull-double {
+  margin-left: initial;
+}
+li .push-single,
+li .push-double,
+td .push-single,
+td .push-double {
+  margin-right: initial;
+}
