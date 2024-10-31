@@ -2,6 +2,10 @@
 
 A [lua filter] for [Pandoc], which allows curly quotes to hang into the margin.
 
+<!-- TODO(jez) Add a screenshot -->
+<!-- TODO(jez) Add a quick website, possibly using pandoc-markdown-css-theme -->
+<!-- TODO(jez) Add a page to pandoc-markdown-css-theme advertising this -->
+
 [lua filter]: https://pandoc.org/lua-filters.html
 [Pandoc]: https://pandoc.org
 
@@ -152,9 +156,6 @@ Typeset.
 
 It's also inspired by [Dropbox Paper], which includes support for hanging
 punctuation, and has inspired [my other writing-focused tools][pandoc-css].
-
-<!-- TODO(jez) InDesign, some sort of doc for the idea of hanging punctuation,
-LaTeX? -->
 
 [Typeset]: https://typeset.lllllllllllllllll.com/
 [Dropbox Paper]: https://paper.dropbox.com/
