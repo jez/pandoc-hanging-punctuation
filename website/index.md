@@ -12,7 +12,7 @@ date: "2024-10-30"
 regenerate: true
 ---
 
-This project provides a [lua filter] for [Pandoc] along with some CSS files
+This project provides a [lua filter] for [Pandoc] along with some CSS styles
 which together allow curly quotes to hang into the margin. Here's an example:
 
 [lua filter]: https://pandoc.org/lua-filters.html
@@ -29,7 +29,7 @@ A chuckle sounded through the troop. "We call that one muad'dib," Stilgar said.
 - - - - -
 
 Note how the `“` on the first line hangs into the margin. But also, depending on
-the screen width, the mid-paragraph quote of starting `“We ...` may also hang
+the screen width, the mid-paragraph quote starting `“We ...` may also hang
 into the margin:
 
 ::: left-align-caption
@@ -38,7 +38,7 @@ into the margin:
 
 ![The same quote, at a small screen size](/pandoc-hanging-punctuation/assets/img/dark/dune-quote.png){style="max-width:453px;"}
 
-This effect is not possible with the CSS property [`hanging-punctuation`].
+This effect is not possible with the [`hanging-punctuation`] CSS property.
 Safari supports it, but only for the very first quotation mark in a block. All
 other browsers do not support it.
 
@@ -54,15 +54,19 @@ punctuation](https://en.wikipedia.org/wiki/Hanging_punctuation) on Wikipedia.
 
 1.  Download the `hanging-punctuation.lua` file:
 
-    ```bash
+    :::{.wide}
+    ```{.bash}
     curl -sSLO https://raw.githubusercontent.com/jez/pandoc-hanging-punctuation/refs/heads/master/hanging-punctuation.lua
     ```
+    :::
 
 1.  Download the `hanging-punctuation.css` file:
 
-    ```bash
+    :::{.wide}
+    ```{.bash}
     curl -sSLO https://raw.githubusercontent.com/jez/pandoc-hanging-punctuation/refs/heads/master/hanging-punctuation.css
     ```
+    :::
 
 1.  Pass these files when invoking `pandoc`:
 
