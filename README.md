@@ -25,7 +25,7 @@ A [lua filter] for [Pandoc], which allows curly quotes to hang into the margin.
     pandoc -f markdown -t html index.md \
       --standalone \
       --lua-filter=./hanging-punctuation.lua \
-      --css typeset.css > index.html
+      --css ./hanging-punctuation.css > index.html
     ```
 
     The input must either use `‘` and `“` quotes directly, or have the [`smart`
@@ -45,6 +45,7 @@ A [lua filter] for [Pandoc], which allows curly quotes to hang into the margin.
 1.  Modify the `hanging-punctuation.css` file to set the two root CSS variables:
 
     ```css
+    /* -- hanging-punctuation.css -- */
     :root {
       /**
        * These widths will vary with font-family, font-weight, etc.
@@ -53,6 +54,8 @@ A [lua filter] for [Pandoc], which allows curly quotes to hang into the margin.
       --single-quote-width: 0.33em;
       --double-quote-width: 0.44em;
     }
+
+    /* ... */
     ```
 
     These variables declare how big `‘` and `“` characters are in the chosen
