@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="/">
+<head>
+    <meta charset="utf-8" />
+  <meta name="generator" content="pandoc-markdown-css-theme" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="author" content="@jez">
+<meta name="dcterms.date" content="2024-10-30">
+<meta name="description" content="A lua filter for Pandoc which allows curly quotes to hang into the margin.">
+<title>Hanging Punctuation in Pandoc – pandoc-hanging-punctuation</title>
+
+  <link rel="stylesheet" href="/pandoc-hanging-punctuation/assets/css/theme.css">
+<link rel="stylesheet" href="/pandoc-hanging-punctuation/assets/css/skylighting-solarized-theme.css">
+
+
+
+
+  
+    <link rel="alternate" type="application/atom+xml" href="/pandoc-hanging-punctuation/atom.xml">
+  
+    <link rel="stylesheet" href="/pandoc-hanging-punctuation/assets/css/hanging-punctuation.css">
+  
+    <link rel="stylesheet" href="/pandoc-hanging-punctuation/assets/css/extra.css">
+  
+
+
+
+
+</head>
+<body>
+  
+
+
+
+
+  <header>
+    <h1 class="title">Hanging Punctuation in Pandoc</h1>
+    <blockquote class="metadata">
+    <p class="subtitle">A lua filter for Pandoc which allows curly quotes to hang into the margin.</p>
+    <p class="author">
+        <a href="https://github.com/jez">@jez</a>
+        </p>
+    <p class="date before-toc"><time datetime="2024-10-30">October 30, 2024</time></p>
+    </blockquote>
+  </header>
+
+
+  <nav id="TOC" role="doc-toc">
+  <a href="/pandoc-hanging-punctuation">Home</a><br>
+  <strong>Contents</strong><label for="contents">⊕</label>
+  <input type="checkbox" id="contents">
+  <ul>
+  <li><a href="#usage" id="toc-usage">Usage</a>
+  <ul>
+  <li><a href="#caveats" id="toc-caveats">Caveats</a></li>
+  </ul></li>
+  <li><a href="#inspiration" id="toc-inspiration">Inspiration</a></li>
+  <li><a href="#testing" id="toc-testing">Testing</a></li>
+  </ul>
+</nav>
+
+<main>
+<p>This project provides a <a
+href="https://pandoc.org/lua-filters.html">lua filter</a> for <a
+href="https://pandoc.org">Pandoc</a> along with some CSS files which
+together allow curly quotes to hang into the margin. Here’s an
+example:</p>
+<hr />
+<p><span class="pull-double">“</span>How do you call among you the
+little mouse, the mouse that jumps?” Paul asked, remembering the pop-hop
+of motion at Tuono Basin. He illustrated with one hand. A chuckle
+sounded through the troop. <span class="push-double"></span><span
+class="pull-double">“</span>We call that one muad’dib,” Stilgar
+said.</p>
+<p>— Frank Herbert, <em>Dune</em></p>
+<hr />
+<p>Note how the <code>“</code> on the first line hangs into the margin.
+But also, depending on the screen width, the mid-paragraph quote of
+starting <code>“We ...</code> may also hang into the margin:</p>
+<div class="left-align-caption">
+<figure>
+<img src="/pandoc-hanging-punctuation/assets/img/light/dune-quote.png"
+style="max-width:456px;" alt="The same quote, at a small screen size" />
+<figcaption aria-hidden="true">The same quote, at a small screen
+size</figcaption>
+</figure>
+</div>
+<figure>
+<img src="/pandoc-hanging-punctuation/assets/img/dark/dune-quote.png"
+style="max-width:453px;" alt="The same quote, at a small screen size" />
+<figcaption aria-hidden="true">The same quote, at a small screen
+size</figcaption>
+</figure>
+<p>This effect is not possible with the CSS property <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation"><code>hanging-punctuation</code></a>.
+Safari supports it, but only for the very first quotation mark in a
+block. All other browsers do not support it.</p>
+<p>By contrast, this filter allows quotation characters to hang into the
+margin even in the middle of body text, and works in all browsers.</p>
+<p>For more, read about <a
+href="https://en.wikipedia.org/wiki/Hanging_punctuation">hanging
+punctuation</a> on Wikipedia.</p>
+<h1 id="usage">Usage</h1>
+<ol type="1">
+<li><p>Download the <code>hanging-punctuation.lua</code> file:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sSLO</span> https://raw.githubusercontent.com/jez/pandoc-hanging-punctuation/refs/heads/master/hanging-punctuation.lua</span></code></pre></div></li>
+<li><p>Download the <code>hanging-punctuation.css</code> file:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sSLO</span> https://raw.githubusercontent.com/jez/pandoc-hanging-punctuation/refs/heads/master/hanging-punctuation.css</span></code></pre></div></li>
+<li><p>Pass these files when invoking <code>pandoc</code>:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">-f</span> markdown <span class="at">-t</span> html index.md <span class="dt">\</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--standalone</span> <span class="dt">\</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--lua-filter</span><span class="op">=</span>./hanging-punctuation.lua <span class="dt">\</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">--css</span> ./hanging-punctuation.css <span class="op">&gt;</span> index.html</span></code></pre></div>
+<p>The input must either use <code>‘</code> and <code>“</code> quotes
+directly, or have the <a
+href="https://pandoc.org/MANUAL.html#extension-smart"><code>smart</code>
+extension</a> enabled.</p>
+<p>The <code>smart</code> extension is on by default in Pandoc’s
+<code>markdown</code> input format, but off by default in others,
+including the <code>commonmark</code> format. Enable it by passing
+<code>+smart</code> to the format when invoking <code>pandoc</code>,
+like <code>-f commonmark+smart</code>.</p>
+<p>See the Pandoc docs for more:</p>
+<ul>
+<li><a
+href="https://pandoc.org/MANUAL.html#option--css"><code>--css</code></a></li>
+<li><a
+href="https://pandoc.org/MANUAL.html#option--lua-filter"><code>--lua-filter</code></a></li>
+<li><a
+href="https://pandoc.org/MANUAL.html#extension-smart"><code>+smart</code></a></li>
+</ul></li>
+<li><p>Modify the <code>hanging-punctuation.css</code> file to set the
+two root CSS variables:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* -- hanging-punctuation.css -- */</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">:root</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">/**</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">   * These widths will vary with font-family, font-weight, etc.</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">   * </span><span class="al">TODO</span><span class="co">: Customize these values as needed</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">   */</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="va">--single-quote-width</span>: <span class="dv">0.275</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">--double-quote-width</span>: <span class="dv">0.44</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">/* ... */</span></span></code></pre></div>
+<p>These variables declare how big <code>‘</code> and <code>“</code>
+characters are in the chosen font. Different font settings, like the
+family and weight, will affect the width.</p>
+<p>To determine a value for these variables, use a document like
+this:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> test</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Hello\</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>&quot;Hello&quot;\</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>Hello\</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>&#39;Hello&#39;\</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Hello</span></code></pre></div>
+<p>Render this markdown to HTML, then use the browser’s developer tools
+to vertically align all the <code>H</code> characters.</p>
+<p>As a a trick, on some operating systems you can use the system
+screenshot tool as a quick way to check if things are aligned and
+measure pixels distances on the screen.</p></li>
+<li><p>Ensure that no other CSS in the page sets the
+<code>hanging-punctuation</code> property.</p>
+<p>Either edit that CSS to remove mentions of it, or write CSS to
+forcibly override any inherited <code>hanging-punctuation</code>
+settings.</p></li>
+</ol>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li><p>Only HTML output has been tested. Other Pandoc output formats,
+like LaTeX or Microsoft Word, are not supported (though it may be
+possible to use this tool as a starting point to support other
+formats).</p></li>
+<li><p>This overrules <a
+href="https://pandoc.org/MANUAL.html#option--html-q-tags%5B">the
+<code>--html-q-tags=true</code> option</a> affecting the HTML writer. No
+<code>&lt;q&gt;</code> tags will be produced in the output, even with
+that option passed, if this filter is used.</p>
+<p>(Why? Because this filter eliminates <code>Quoted</code> nodes in
+Pandoc’s internal AST in the course of working, which otherwise power
+the HTML writer’s <code>&lt;q&gt;</code> tag support.)</p></li>
+<li><p>Hanging is disabled inside list items and table cells, even if
+there would otherwise be enough space in the margin to hang the
+punctuation.</p>
+<p>To change this, edit the relevant lines in
+<code>hanging-punctuation.css</code> as desired.</p></li>
+</ul>
+<h1 id="inspiration">Inspiration</h1>
+<p>This filter is heavily inspired by <a
+href="https://typeset.lllllllllllllllll.com/">Typeset</a>, <span
+class="push-double"></span><span class="pull-double">“</span>An HTML
+pre-processor for web typography.” Compared to Typeset, this
+project:</p>
+<ul>
+<li>Requires no JavaScript library (nor JavaScript build process)</li>
+<li>Uses Pandoc’s internal document AST, instead of the DOM, which makes
+certain edge cases more robust.</li>
+<li>Does not need to handle straight → curly quotation mark conversion
+nor en- and em-dash conversion, because Pandoc handles those.</li>
+</ul>
+<p>Typeset includes other features which could be handled separately if
+desired (like auto-soft-hyphenation and certain other punctuation
+substitutions). The markup structure in this project is borrowed from
+Typeset.</p>
+<p>It’s also inspired by <a href="https://paper.dropbox.com/">Dropbox
+Paper</a>, which includes support for hanging punctuation, and has
+inspired my other writing-focused tools. In particular, this website is
+uses my <a href="https://jez.io/pandoc-markdown-css-theme/">Pandoc
+Markdown CSS Theme</a>, which draws heavy inspiration from the look of
+Dropbox Paper.</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<h1 id="testing">Testing</h1>
+<div style="border: 1px solid red;">
+<div class="line-block">Hello<br />
+<span class="pull-double">“</span>Hello”<br />
+Hello<br />
+<span class="pull-single">‘</span>Hello’<br />
+Hello</div>
+</div>
+<p class="signoff">
+<a href="#posts">↑ Back to top</a>
+</p>
+<a href="https://github.com/jez/pandoc-hanging-punctuation" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+</main>
+
+
+    
+    <script src="/pandoc-hanging-punctuation/assets/js/enable_checkboxes.js"></script>
+
+  
+
+
+
+</body>
+</html>
+

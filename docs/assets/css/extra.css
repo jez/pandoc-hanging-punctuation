@@ -1,0 +1,39 @@
+body {
+  /*
+   * TODO(jez) Move this to upstream. You should stop suggesting
+   * hanging-punctuation and just drive people towards this filter.
+   */
+  hanging-punctuation: initial;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img[src^="/pandoc-hanging-punctuation/assets/img/dark"],
+img[src^="/pandoc-hanging-punctuation/assets/img/dark"] + figcaption {
+  display: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  img[src^="/pandoc-hanging-punctuation/assets/img/dark"],
+  img[src^="/pandoc-hanging-punctuation/assets/img/dark"] + figcaption {
+    display: inherit;
+  }
+
+  img[src^="/pandoc-hanging-punctuation/assets/img/light"],
+  img[src^="/pandoc-hanging-punctuation/assets/img/light"] + figcaption {
+    display: none;
+  }
+}
+
+/*
+ * TODO(jez) Move this to upstream (no italic in comments)
+ *
+ * (If you could figure out a way to make sure that emoji are never italicized,
+ * we could make the rest of comments italic again.)
+ */
+code span.co { color: var(--solarized-base1);  font-weight: normal; font-style: normal; } /* Comment */
+code span.cv { color: var(--solarized-base1);  font-weight: normal; font-style: normal; } /* CommentVar */
