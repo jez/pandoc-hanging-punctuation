@@ -42,4 +42,6 @@ bundle exec octopress new page
 
 ## License
 
+[![MIT License](https://img.shields.io/badge/license-BlueOak-blue.svg)](https://jez.io/blueoak-license/)
+
 Blue Oak Model License, Version 1.0.0
