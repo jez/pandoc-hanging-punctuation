@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ "$#" -gt 1 ] || [ "${1:-}" = '-h' ] || [ "${1:-}" = '--help' ]; then
+  >&2 echo "usage: $0 [<draft>]"
+  exit 1
+fi
+
+if [ "${1:-}" != "" ]; then
+  bundle exec octopress publish "$1"
+fi
+
+# Stash only untracked
+git add _posts
+git stash --quiet
+git stash --quiet --include-untracked
+git stash pop --quiet "stash@{1}"
+trap 'git stash pop --quiet' EXIT
+
+bundle exec jekyll build
+git add ../docs

@@ -1,0 +1,12 @@
+---
+# vim:tw=90 fo-=t
+layout: {{ layout }}
+title: "{{ title }}"
+date: {{ date }}
+description: TODO
+math: false
+categories: ['TODO']
+# subtitle:
+# author:
+# author_url:
+---

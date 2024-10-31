@@ -1,0 +1,79 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+title: pandoc-hanging-punctuation
+author: Jake Zimmerman
+description: >-
+  A lua filter for Pandoc which allows curly quotes to hang into the margin.
+baseurl: "/pandoc-hanging-punctuation"
+url: "https://jez.io"
+future: false
+timezone: America/Los_Angeles
+
+destination: ../docs
+
+permalink: '/:slug/'
+
+theme: 'pandoc-markdown-jekyll-theme'
+markdown: Pandoc
+pandoc:
+  extensions:
+    - from: 'markdown+smart+tex_math_single_backslash+emoji'
+    - lua-filter: './pandoc-sidenote.lua'
+    - lua-filter: '../hanging-punctuation.lua'
+    - template: '_template'
+    - katex
+    - toc
+    - M: 'site__baseurl=/pandoc-hanging-punctuation'
+
+# HACK(jez): We have to hard code the site.baseurl here
+header_includes:
+  # Inherit favicon from jez.io
+  # - '<link rel="apple-touch-icon-precomposed" href="/jez/assets/img/touch-icon.png">'
+  # - '<link rel="icon" sizes="32x32" href="/jez/assets/img/favicon@2x.png">'
+  # - '<link rel="icon" sizes="16x16" href="/jez/assets/img/favicon.png">'
+  - '<link rel="alternate" type="application/atom+xml" href="/pandoc-hanging-punctuation/atom.xml">'
+  - '<link rel="stylesheet" href="/pandoc-hanging-punctuation/assets/css/hanging-punctuation.css">'
+  - '<link rel="stylesheet" href="/pandoc-hanging-punctuation/assets/css/extra.css">'
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+gems:
+  - jekyll-feed
+  - jekyll-pandoc
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - tags
+
+include:
+  - .nojekyll
+
+feed:
+  path: atom.xml
+
+# Octopress configuration
+
+post_ext: md
+page_ext: md
+
+# Default templates for posts and pages
+post_layout: post
+page_layout: page
+
+# Format titles with titlecase?
+titlecase: false
+
+# Change default template file (in _templates/)
+post_template: post
+page_template: page
+draft_template: post
