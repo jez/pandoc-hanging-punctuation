@@ -12,6 +12,8 @@ Line this up\
 'Line this up'\
 **'Even' the bold "quotes", too**
 
+&ldquo;Character entity&rdquo;
+
 [Some text]{.class}
 
 Here is not bold.
