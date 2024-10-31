@@ -1,7 +1,3 @@
--- TODO(jez) Document that this overrules the --html-q-tags=true setting
--- TODO(jez) Document that this requires the `smart` extension (enabled by default for `markdown` filetype)
--- TODO(jez) Document how to pick em values for the push/pull classes
---
 -- TODO(jez) The typeset docs are wrong: cannot include `inline-block`.
 --
 -- TODO(jez) You can probably write exp tests with `-t json` output after applying the filter
@@ -36,10 +32,11 @@ local replaceQuotes = {
     -- lua patterns basically don't work on utf8 characters, so we have to use
     -- the utf8 library functions directly to do what we're trying to do.
     firstChar = utf8.codepoint(elem.text, 1, 1)
+    local quote
     if firstChar == LEFT_SINGLE_QUOTATION_MARK then
-      local quote = '‘'
+      quote = '‘'
     elseif firstChar == LEFT_DOUBLE_QUOTATION_MARK then
-      local quote = '“'
+      quote = '“'
     else
       return elem
     end
@@ -213,4 +210,4 @@ return {
   replaceQuotes,
   removeLeadingPushSpans,
 }
--- vim:fdm=marker
+-- vim:fdm=marker‘

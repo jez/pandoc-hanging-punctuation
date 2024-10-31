@@ -1,4 +1,8 @@
 :root {
+  /**
+   * These widths will vary with font-family, font-weight, etc.
+   * TODO: Customize these values as needed
+   */
   --single-quote-width: 0.33em;
   --double-quote-width: 0.44em;
 }
