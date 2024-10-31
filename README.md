@@ -40,7 +40,7 @@ A [lua filter] for [Pandoc], which allows curly quotes to hang into the margin.
 
     - [`--css`](https://pandoc.org/MANUAL.html#option--css)
     - [`--lua-filter`](https://pandoc.org/MANUAL.html#option--lua-filter)
-    - [+smart][smart]
+    - [`+smart`][smart]
 
 1.  Modify the `hanging-punctuation.css` file to set the two root CSS variables:
 
