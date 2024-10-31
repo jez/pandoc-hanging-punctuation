@@ -1,10 +1,3 @@
--- TODO(jez) The typeset docs are wrong: cannot include `inline-block`.
---
--- TODO(jez) You can probably write exp tests with `-t json` output after applying the filter
--- On second thought, `-t html --wrap=preserve` seems to be basically good enough
---
--- TODO(jez) pandoc filter that reimplements markdoc-style tables
-
 -- Make the spans which push and pull quotes around ----------------------- {{{
 local function makePushPull(quote)
   local quoteKind
@@ -210,4 +203,4 @@ return {
   replaceQuotes,
   removeLeadingPushSpans,
 }
--- vim:fdm=marker‘
+-- vim:fdm=marker
