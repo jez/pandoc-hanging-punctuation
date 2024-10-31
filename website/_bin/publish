@@ -12,11 +12,11 @@ if [ "${1:-}" != "" ]; then
 fi
 
 # Stash only untracked
-git add _posts
-git stash --quiet
-git stash --quiet --include-untracked
-git stash pop --quiet "stash@{1}"
-trap 'git stash pop --quiet' EXIT
+# git add _posts
+# git stash --quiet
+# git stash --quiet --include-untracked
+# git stash pop --quiet "stash@{1}"
+# trap 'git stash pop --quiet' EXIT
 
 bundle exec jekyll build
 git add ../docs
