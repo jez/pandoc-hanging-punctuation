@@ -1,3 +1,7 @@
+-- File:   hanging-punctuation.lua
+-- Author: Jake Zimmerman (@jez)
+-- License Blue Oak Model License v1.0.0
+
 -- Make the spans which push and pull quotes around ----------------------- {{{
 local function makePushPull(quote)
   local quoteKind
