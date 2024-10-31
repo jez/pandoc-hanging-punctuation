@@ -52,7 +52,10 @@ punctuation](https://en.wikipedia.org/wiki/Hanging_punctuation) on Wikipedia.
 
 # Usage
 
-1.  Download the `hanging-punctuation.lua` file:
+[`hanging-punctuation.lua`]: https://github.com/jez/pandoc-hanging-punctuation/blob/master/hanging-punctuation.lua
+[`hanging-punctuation.css`]: https://github.com/jez/pandoc-hanging-punctuation/blob/master/hanging-punctuation.css
+
+1.  Download the [`hanging-punctuation.lua`] file:
 
     :::{.wide}
     ```{.bash}
@@ -60,7 +63,7 @@ punctuation](https://en.wikipedia.org/wiki/Hanging_punctuation) on Wikipedia.
     ```
     :::
 
-1.  Download the `hanging-punctuation.css` file:
+1.  Download the [`hanging-punctuation.css`] file:
 
     :::{.wide}
     ```{.bash}
