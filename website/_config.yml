@@ -26,12 +26,10 @@ pandoc:
     - toc
     - M: 'site__baseurl=/pandoc-hanging-punctuation'
 
-# HACK(jez): We have to hard code the site.baseurl here
 header_includes:
   # Inherit favicon from jez.io
-  # - '<link rel="apple-touch-icon-precomposed" href="/jez/assets/img/touch-icon.png">'
-  # - '<link rel="icon" sizes="32x32" href="/jez/assets/img/favicon@2x.png">'
-  # - '<link rel="icon" sizes="16x16" href="/jez/assets/img/favicon.png">'
+  - '<script src="/js/favicon.js"></script>'
+  # HACK(jez): We have to hard code the site.baseurl here
   - '<link rel="alternate" type="application/atom+xml" href="/pandoc-hanging-punctuation/atom.xml">'
   - '<link rel="stylesheet" href="/pandoc-hanging-punctuation/assets/css/hanging-punctuation.css">'
   - '<link rel="stylesheet" href="/pandoc-hanging-punctuation/assets/css/extra.css">'
