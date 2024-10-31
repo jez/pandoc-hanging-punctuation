@@ -62,7 +62,7 @@
 <main>
 <p>This project provides a <a
 href="https://pandoc.org/lua-filters.html">lua filter</a> for <a
-href="https://pandoc.org">Pandoc</a> along with some CSS files which
+href="https://pandoc.org">Pandoc</a> along with some CSS styles which
 together allow curly quotes to hang into the margin. Here’s an
 example:</p>
 <hr />
@@ -75,7 +75,7 @@ said.</p>
 <p>— Frank Herbert, <em>Dune</em></p>
 <hr />
 <p>Note how the <code>“</code> on the first line hangs into the margin.
-But also, depending on the screen width, the mid-paragraph quote of
+But also, depending on the screen width, the mid-paragraph quote
 starting <code>“We ...</code> may also hang into the margin:</p>
 <div class="left-align-caption">
 <figure>
@@ -91,10 +91,10 @@ style="max-width:453px;" alt="The same quote, at a small screen size" />
 <figcaption aria-hidden="true">The same quote, at a small screen
 size</figcaption>
 </figure>
-<p>This effect is not possible with the CSS property <a
-href="https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation"><code>hanging-punctuation</code></a>.
-Safari supports it, but only for the very first quotation mark in a
-block. All other browsers do not support it.</p>
+<p>This effect is not possible with the <a
+href="https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation"><code>hanging-punctuation</code></a>
+CSS property. Safari supports it, but only for the very first quotation
+mark in a block. All other browsers do not support it.</p>
 <p>By contrast, this filter allows quotation characters to hang into the
 margin even in the middle of body text, and works in all browsers.</p>
 <p>For more, read about <a
@@ -103,11 +103,15 @@ punctuation</a> on Wikipedia.</p>
 <h1 id="usage">Usage</h1>
 <ol type="1">
 <li><p>Download the <code>hanging-punctuation.lua</code> file:</p>
+<div class="wide">
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sSLO</span> https://raw.githubusercontent.com/jez/pandoc-hanging-punctuation/refs/heads/master/hanging-punctuation.lua</span></code></pre></div></li>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sSLO</span> https://raw.githubusercontent.com/jez/pandoc-hanging-punctuation/refs/heads/master/hanging-punctuation.lua</span></code></pre></div>
+</div></li>
 <li><p>Download the <code>hanging-punctuation.css</code> file:</p>
+<div class="wide">
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sSLO</span> https://raw.githubusercontent.com/jez/pandoc-hanging-punctuation/refs/heads/master/hanging-punctuation.css</span></code></pre></div></li>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sSLO</span> https://raw.githubusercontent.com/jez/pandoc-hanging-punctuation/refs/heads/master/hanging-punctuation.css</span></code></pre></div>
+</div></li>
 <li><p>Pass these files when invoking <code>pandoc</code>:</p>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">-f</span> markdown <span class="at">-t</span> html index.md <span class="dt">\</span></span>
